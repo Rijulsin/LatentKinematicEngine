@@ -99,4 +99,9 @@ This repository expects pre-extracted features (e.g., OpenAI CLIP ViT-B/32) save
 - ActivityNet Captions
 - MSR-VTT (Zero-shot evaluation)
 
-Please place raw annotation files in the `data/` directory and extracted feature tensors in the `features/` directory according to the paths defined in `config.yaml`.
+Please place your raw annotation files in the `data/` directory and your extracted feature tensors in the `features/` directory according to the paths defined in your `config.yaml`.
+
+### Download Pre-Processed Data and Weights
+You can download the pre-extracted 1D Charades-STA features (32-frame), dataset annotations (CSV/TXT), and our pre-trained LKE weights directly from our **[Google Drive Folder](https://drive.google.com/drive/folders/1lIg4uge4qLwtqk_KQTKftN_5S0Kj2omE?usp=sharing)**. 
+
+Unzip and place these files into their respective `data/`, `features/`, and `checkpoints/` directories before running the evaluation scripts or the web UI.
