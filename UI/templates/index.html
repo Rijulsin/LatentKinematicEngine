@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latent Kinematic Engine - Moment Retrieval</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons removed as requested -->
+</head>
+<body>
+
+    <main class="container">
+        <header class="app-header">
+            <h1><span class="gradient-text">Latent Kinematic Engine</span></h1>
+            <p>1D Associative Memory Moment Retrieval</p>
+        </header>
+
+        <div class="glass-panel main-panel">
+            <form id="retrieval-form" class="retrieval-form">
+                <div class="input-group">
+                    <label for="video-id">Charades Video ID</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="video-id" placeholder="e.g., 3MSZA" required autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="query">Text Query</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="query" placeholder="e.g., person turn a light on." required autocomplete="off">
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn" id="submit-btn">
+                    <span class="btn-text">Retrieve Moment</span>
+                    <div class="spinner" id="spinner"></div>
+                </button>
+            </form>
+
+            <div id="result-container" class="result-container hidden">
+                <div class="result-header">
+                    <h2>Retrieval Results</h2>
+                    <span class="confidence-badge" id="confidence-badge">98% Match</span>
+                </div>
+                
+                <div class="timeline-container">
+                    <div class="timeline-bar">
+                        <div class="timeline-highlight" id="timeline-highlight"></div>
+                    </div>
+                    <div class="timeline-labels">
+                        <span>0.0s</span>
+                        <span id="duration-label">30.0s</span>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-label">Start Time</span>
+                        <span class="stat-value" id="start-time">0.0s</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">End Time</span>
+                        <span class="stat-value" id="end-time">0.0s</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Extracted Noun</span>
+                        <span class="stat-value text-capitalize" id="extracted-noun">-</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Extracted Verb</span>
+                        <span class="stat-value text-capitalize" id="extracted-verb">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="error-message" class="error-message hidden">
+                <span id="error-text">An error occurred.</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

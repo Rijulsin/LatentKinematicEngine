@@ -1,0 +1,7 @@
+# Checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Logs
+*.log
