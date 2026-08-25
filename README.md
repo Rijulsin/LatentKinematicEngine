@@ -99,4 +99,4 @@ This repository expects pre-extracted features (e.g., OpenAI CLIP ViT-B/32) save
 - ActivityNet Captions
 - MSR-VTT (Zero-shot evaluation)
 
-Please place your raw annotation files in the `data/` directory and your extracted feature tensors in the `features/` directory according to the paths defined in your `config.yaml`.
+Please place raw annotation files in the `data/` directory and extracted feature tensors in the `features/` directory according to the paths defined in `config.yaml`.
