@@ -2,15 +2,15 @@
 
 The Latent Kinematic Engine (LKE) is a robust, query-addressed associative memory architecture designed for precise temporal grounding and moment retrieval in untrimmed video content.
 
-This repository contains the training, evaluation, and deployment code for the LKE architecture. By transitioning from simple action-centric classification to an episodic retrieval framework, this codebase demonstrates how query-conditioned temporal attention significantly improves moment localization over standard temporal transformers.
+This repository contains the training, evaluation, and deployment code for the LKE architecture. By transitioning from simple action-centric classification to an episodic retrieval framework, this codebase demonstrates how query-conditioned temporal attention significantly improves moment localisation over standard temporal transformers.
 
 ## Features
 
-- **Kinematic Grounding:** Advanced 1D and spatial-temporal LKE architectures for precise event localization.
-- **Associative Memory:** Episodic memory retrieval module featuring cross-event contextualization and orthogonal latent disentanglement.
+- **Kinematic Grounding:** Advanced 1D and spatial-temporal LKE architectures for precise event localisation.
+- **Associative Memory:** Episodic memory retrieval module featuring cross-event contextualisation and orthogonal latent disentanglement.
 - **Zero-Shot Transfer:** Built-in pipelines for zero-shot evaluation on datasets like ActivityNet Captions and MSR-VTT.
-- **Interactive UI:** A Flask-based web application (`app.py`) for real-time inference and visualization of temporal grounding predictions.
-- **Centralized Configuration:** A clean, YAML-based configuration system for managing datasets, checkpoints, and extracted features without hardcoded paths.
+- **Interactive UI:** A Flask-based web application (`app.py`) for real-time inference and visualisation of temporal grounding predictions.
+- **Centralised Configuration:** A clean, YAML-based configuration system for managing datasets, checkpoints, and extracted features without hardcoded paths.
 
 ## Repository Structure
 
