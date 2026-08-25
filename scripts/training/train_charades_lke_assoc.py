@@ -135,7 +135,10 @@ def main():
     optimizer = optim.AdamW(model.parameters(), lr=1e-4, weight_decay=0.01)
 
     EPOCHS = 50
-    scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOCHS * len(train_dataloader))
+    steps_per_epoch = len(train_dataloader)
+    scheduler1 = optim.lr_scheduler.ConstantLR(optimizer, factor=1.0, total_iters=30 * steps_per_epoch)
+    scheduler2 = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=20 * steps_per_epoch)
+    scheduler = optim.lr_scheduler.SequentialLR(optimizer, schedulers=[scheduler1, scheduler2], milestones=[30 * steps_per_epoch])
 
     best_val_loss = float('inf')
     print(f"Checkpoint will be saved to: {CHECKPOINT_PATH}", flush=True)
