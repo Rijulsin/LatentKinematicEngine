@@ -54,7 +54,7 @@ python -m spacy download en_core_web_sm
 
 ## Configuration
 
-All paths to datasets, features, and model checkpoints are managed through `config.yaml`. Before running training or evaluation scripts, ensure you have placed your data in the corresponding directories or updated `config.yaml` to point to your custom paths.
+All paths to datasets, features, and model checkpoints are managed through `config.yaml`. Before running training or evaluation scripts, ensure you have placed the data in the corresponding directories or updated `config.yaml` to point to your custom paths.
 
 Example `config.yaml` configuration:
 ```yaml
@@ -85,7 +85,7 @@ python scripts/evaluation/test_msrvtt_lke_assoc.py
 
 ### Interactive Web UI
 
-You can interactively test the model's temporal grounding capabilities using the included web interface. Ensure your trained `.pt` model is placed in the configured checkpoint directory, then run:
+You can interactively test the model's temporal grounding capabilities using the included web interface. Ensure the trained `.pt` model is placed in the configured checkpoint directory, then run:
 
 ```bash
 python UI/app.py
